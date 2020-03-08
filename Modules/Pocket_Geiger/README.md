@@ -3,7 +3,7 @@
 Pocket Geiger
 
 <p align="center">
-  <img width="50%" height="50%" src="img/pocket_geiger_module.jpg">
+  <img width="45%" height="45%" src="img/pocket_geiger_module.jpg">
 </p>
 
 ## Code

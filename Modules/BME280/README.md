@@ -18,8 +18,55 @@ THe BME280 module uses [BME280 sensor](https://www.bosch-sensortec.com/products/
 ## Scheme
 
 <p align="center">
-  <img width="40%" height="40%" src="img/bme280_scheme.png">
+  <img width="45%" height="45%" src="img/bme280_scheme.png">
 </p>
 
 
 ## Code
+
+```arduino
+
+#include <Wire.h>
+#include <Adafruit_BME280.h>
+
+#define SEALEVELPRESSURE_HPA (1013.25)
+
+Adafruit_BME280 bme;
+
+void setup() {
+    Serial.begin(9600);
+    
+    if (!bme.begin()) {
+        Serial.println("Could not find a valid BME280 sensor, check wiring, address, sensor ID!");
+        while (1) delay(10);
+    }
+}
+
+
+void loop() { 
+    Serial.print("Temperature = ");
+    Serial.print(bme.readTemperature());
+    Serial.println(" *C");
+
+    Serial.print("Pressure = ");
+
+    Serial.print(bme.readPressure() / 100.0F);
+    Serial.println(" hPa");
+
+    Serial.print("Approx. Altitude = ");
+    Serial.print(bme.readAltitude(SEALEVELPRESSURE_HPA));
+    Serial.println(" m");
+
+    Serial.print("Humidity = ");
+    Serial.print(bme.readHumidity());
+    Serial.println(" %");
+
+    Serial.println();
+    
+    delay(1000);
+}
+```
+
+Library:
+
+* [Adafruit_BME280](./src/lib)

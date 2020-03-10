@@ -1,3 +1,9 @@
+/*
+    MLX90614 Module Sketch
+
+    (c) Tivole
+*/
+
 #include <Wire.h>
 #include <Adafruit_MLX90614.h>
 

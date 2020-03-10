@@ -1,3 +1,9 @@
+/*
+    UVM-30A Module Sketch
+
+    (c) Tivole
+*/
+
 unsigned int Read_UV_index(int UVM30A_PIN) {
   int sensorValue = 0, voltage = 0;
   unsigned int UVIndex = 0;

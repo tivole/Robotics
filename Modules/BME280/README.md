@@ -16,6 +16,7 @@ THe BME280 module uses [BME280 sensor](https://www.bosch-sensortec.com/products/
 * Average typical current consumption (1 Hz data rate): 3.4 μA @ 1 Hz
 * Average current consumption (1 Hz data refresh rate): 1.2 ... 3.6 V
 * Average current consumption in sleep mode: 1.71 ... 3.6 V
+* I2C interface, 0x77 (0x76) is the fixed 7-bit address
 
 
 

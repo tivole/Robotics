@@ -1,27 +1,3 @@
-# UVM-30A
-
-<p align="center">
-  <img width="30%" height="30%" src="img/uvm30a_module.jpg">
-</p>
-
-## Description
-This UVM-30A UV Sensor Breakout Board is used for detecting intensity of UltraViolet Radiation.
-
-The module will detect this electromagnetic radiation and using the UVM30A chip it will convert the short wavelengths into digital signal for your microcontroller. It a great little sensor to tell how  much sunlight your plants are getting or if it’s the right day to put on sun cream before going out.
-
-
-## Details
-* Response Wavelength: 200-370nm
-* Operating Temperature: -40 to 85°C
-* Dimensions: 27 x 14 x 6 mm (L x W x H)
-
-
-## Scheme
-
-
-## Code
-
-```arduino
 unsigned int Read_UV_index(int UVM30A_PIN) {
   int sensorValue = 0, voltage = 0;
   unsigned int UVIndex = 0;
@@ -43,4 +19,3 @@ unsigned int Read_UV_index(int UVM30A_PIN) {
 
   return UVIndex;
 }
-```

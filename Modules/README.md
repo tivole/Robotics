@@ -4,7 +4,7 @@
 
 - [ ] [BH1750](./BH1750)
 
-- [ ] [MLX90614](./MLX90614)
+- [x] [MLX90614](./MLX90614)
 
 - [ ] [Pocket Geiger](./Pocket_Geiger)
 

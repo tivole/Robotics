@@ -10,9 +10,15 @@ This sensor module has an MG-811 onboard as the sensor component. There is an on
 
 
 ## Details
-
+* Analog and digital output
+* Onboard signal conditioning circuit
+* Onboard heating circuit
+* Sensor jack eliminates soldering the sensor and allows plug-and-play
+* 4-pin interlock connectors onboard
+* 4-pin interlock cables included in the package
 
 ## Scheme
+
 
 
 ## Code

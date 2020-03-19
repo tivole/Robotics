@@ -1,7 +1,7 @@
 # MQ131
 
 <p align="center">
-  <img width="50%" height="50%" src="img/mq131_module.jpeg">
+  <img width="35%" height="35%" src="img/mq131_module.jpeg">
 </p>
 
 
@@ -17,6 +17,7 @@ MQ131 Gas Sensor has high sensitivity to ozone with long life, low cost and simp
 
 
 ## Scheme
+
 
 
 ## Code

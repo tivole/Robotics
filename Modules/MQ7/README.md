@@ -16,6 +16,9 @@ MQ-7 is a **Carbon Monoxide** (CO) sensor, suitable for sensing Carbon Monoxide 
 
 
 ## Scheme
+<p align="center">
+  <img width="60%" height="60%" src="img/mq7_scheme.png">
+</p>
 
 
 ## Code

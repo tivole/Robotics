@@ -17,7 +17,9 @@ The module will detect this electromagnetic radiation and using the UVM30A chip 
 
 
 ## Scheme
-
+<p align="center">
+  <img width="60%" height="60%" src="img/uvm30a_scheme.png">
+</p>
 
 ## Code
 

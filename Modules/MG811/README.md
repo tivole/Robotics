@@ -1,7 +1,7 @@
 # MG811
 
 <p align="center">
-  <img width="40%" height="40%" src="img/mg811_module.jpg">
+  <img width="35%" height="35%" src="img/mg811_module.jpg">
 </p>
 
 
@@ -33,7 +33,9 @@ The threshold of the comparator open drain output pin BOOL can be set by on-boar
 
 
 ## Scheme
-
+<p align="center">
+  <img width="50%" height="50%" src="img/mg811_scheme.png">
+</p>
 
 
 ## Code

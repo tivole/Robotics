@@ -8,9 +8,9 @@
 
 - [ ] [Pocket Geiger](./Pocket_Geiger)
 
-- [ ] [MQ7](./MQ7)
+- [x] [MQ7](./MQ7)
 
-- [ ] [MQ131](./MQ131)
+- [x] [MQ131](./MQ131)
 
 - [x] [MG811](./MG811)
 

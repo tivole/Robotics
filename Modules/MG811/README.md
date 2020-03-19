@@ -17,6 +17,21 @@ This sensor module has an MG-811 onboard as the sensor component. There is an on
 * 4-pin interlock connectors onboard
 * 4-pin interlock cables included in the package
 
+
+## Theory
+The **MG-811** sensor is basically a cell which gives an output in the range of 100-600mV (400—10000ppm ![CO2](./img/formulas/CO_2.gif)). The current sourcing capability of the cell is quite limited. The amplitude of the signal is so low and the output impedance of the cell is so high that a signal conditioning circuit is required between the sensor and microcontroller’s ADC input. The output voltage of the sensor in clean air (typically 400ppm ![CO2](./img/formulas/CO_2.gif)) is in the range of 200mV-600mV, this output voltage is defined as Zero Point Voltage (![V­0](./img/formulas/V_0.gif)) which is the baseline voltage. The output voltage will decrease as the ![CO2](./img/formulas/CO_2.gif) concentration increases. When the concentration of ![CO2](./img/formulas/CO_2.gif) is greater than 400ppm, the output voltage (![V­s](./img/formulas/V_s.gif)) is linear to the common logarithm of the ![CO2](./img/formulas/CO_2.gif) concentration (![CCO2](./img/formulas/C_CO2.gif)):
+
+![Vs=](./img/formulas/Vs_formula.gif)
+
+Reaction Voltage(![ΔVs](./img/formulas/Delta_Vs.gif)) is the voltage drop from ![CO2](./img/formulas/CO_2.gif) concentration of 400ppm to ![CO2](./img/formulas/CO_2.gif) concentration of 1000ppm, which may differ from sensor to sensor. The typical value for![ΔVs](./img/formulas/Delta_Vs.gif) is 30mV-90mV. In order to get an accurate ![CO2](./img/formulas/CO_2.gif) concentration result, proper calibration is required.
+
+The DC gain of the signal conditioning circuit is 8.5. So the range of VOUT is 0.85-5.0V, which is a reasonable range for a 5V microcontroller or standalone ADC.
+
+The threshold of the comparator open drain output pin BOOL can be set by on-board trimmer R11. When VOUT is lower than the threshold voltage the BOOL is at ground potential. When VOUT is greater than the preset value, the BOOL is open circuit. User should connect a pull-up resistor to the BOOL pin in order to have a valid “high” state.
+
+
+
+
 ## Scheme
 
 

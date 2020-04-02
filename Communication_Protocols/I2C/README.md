@@ -22,6 +22,10 @@ I²C uses only two wires: SCL (serial clock) and SDA (serial data). Both need to
 
 Basic I²C communication is using transfers of 8 bits or bytes. Each I²C slave device has a 7-bit address that needs to be unique on the bus. Some devices have fixed I²C address while others have few address lines which determine lower bits of the I²C address. This makes it very easy to have all I²C devices on the bus with unique I²C address. There are also devices which have 10-bit address as allowed by the specification.
 
+<p align="center">
+  <img width="80%" height="80%" src="img/I2C-Message-Frame-and-Bit-2.png">
+</p>
+
 7-bit address represents bits 7 to 1 while bit 0 is used to signal reading from or writing to the device. If bit 0 (in the address byte) is set to 1 then the master device will read from the slave I²C device.
 
 Master device needs no address since it generates the clock (via SCL) and addresses individual I²C slave devices.
@@ -37,7 +41,19 @@ In normal state both lines (SCL and SDA) are high. The communication is initiate
 
 Most I²C devices support repeated start condition. This means that before the communication ends with a stop condition, master device can repeat start condition with address byte and change the mode from writing to reading.
 
+## Advantages and Disadvantages of I2C
 
+### Advantages
+- Only uses two wires
+- Supports multiple masters and multiple slaves
+- ACK/NACK bit gives confirmation that each frame is transferred successfully
+- Hardware is less complicated than with UARTs
+- Well known and widely used protocol
+
+### Disadvantages
+- Slower data transfer rate than SPI
+- The size of the data frame is limited to 8 bits
+- More complicated hardware needed to implement than SPI
 
 ## Addresses of some modules
 

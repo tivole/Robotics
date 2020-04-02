@@ -1,4 +1,4 @@
-# I2C_Addresses
+# I2C
 
 | Module        | Address       |
 |       ---     |       ---     |
@@ -14,3 +14,5 @@
 | ADXL345       | 0x53          |
 | MPU6500       | 0x68          |
 | MPU9250       | 0x68          |
+
+[MAG3110](./../MAG3110/README.md)

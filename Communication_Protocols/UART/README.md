@@ -46,3 +46,53 @@ During the reception, RxD line (Receiver) is used for receiving the data.
   <img width="90%" height="90%" src="img/UART-Receive-Frame.png">
 </p>
 
+## Steps of SPI Data Transmission
+
+1. The transmitting UART receives data in parallel from the data bus:
+
+<p align="center">
+  <img width="40%" height="40%" src="img/Data-Transmission-Diagram-UART-Gets-Byte-from-Data-Bus.png">
+</p>
+
+2. The transmitting UART adds the start bit, parity bit, and the stop bit(s) to the data frame:
+
+<p align="center">
+  <img width="40%" height="40%" src="img/Data-Transmission-Diagram-UART-Adds-Start-Parity-ad-Stop-Bits-2.png">
+</p>
+
+3. The entire packet is sent serially from the transmitting UART to the receiving UART. The receiving UART samples the data line at the pre-configured baud rate:
+
+<p align="center">
+  <img width="40%" height="40%" src="img/Data-Transmission-Diagram-Transmitting-UART-Sends-Data-Packet-Serially-to-Receiving-UART.png">
+</p>
+
+4.  The receiving UART discards the start bit, parity bit, and stop bit from the data frame:
+
+<p align="center">
+  <img width="40%" height="40%" src="img/Data-Transmission-Diagram-UART-Removes-Start-Parity-and-Stop-Bits-2.png">
+</p>
+
+5. The receiving UART converts the serial data back into parallel and transfers it to the data bus on the receiving end:
+
+<p align="center">
+  <img width="40%" height="40%" src="img/Data-Transmission-Diagram-Receiving-UART-Sends-Byte-to-Data-Bus-2.png">
+</p>
+
+
+
+## Advantages and Disadvantages of I2C
+No communication protocol is perfect, but UARTs are pretty good at what they do. Here are some pros and cons to help you decide whether or not they fit the needs of your project:
+
+### Advantages
+
+- Only uses two wires
+- No clock signal is necessary
+- Has a parity bit to allow for error checking
+- The structure of the data packet can be changed as long as both sides are set up for it
+- Well documented and widely used method
+
+### Disadvantages
+
+- The size of the data frame is limited to a maximum of 9 bits
+- Doesn’t support multiple slave or multiple master systems 
+- The baud rates of each UART must be within 10% of each other

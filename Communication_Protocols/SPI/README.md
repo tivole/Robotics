@@ -65,3 +65,44 @@ The master sends data to the slave bit by bit, in serial through the MOSI line. 
 
 The slave can also send data back to the master through the MISO line in serial. The data sent from the slave back to the master is usually sent with the least significant bit first.
 
+## Steps of SPI Data Transmission
+
+1. The master outputs the clock signal:
+
+<p align="center">
+  <img width="60%" height="60%" src="img/Data-Transmission-Diagram-Clock-Signal.png">
+</p>
+
+2. The master switches the SS/CS pin to a low voltage state, which activates the slave:
+
+<p align="center">
+  <img width="60%" height="60%" src="img/Data-Transmission-Diagram-Slave-Select-Activation.png">
+</p>
+
+3. The master sends the data one bit at a time to the slave along the MOSI line. The slave reads the bits as they are received:
+
+<p align="center">
+  <img width="60%" height="60%" src="img/Data-Transmission-Diagram-Master-to-Slave-Data-Transfer.png">
+</p>
+
+4. If a response is needed, the slave returns data one bit at a time to the master along the MISO line. The master reads the bits as they are received:
+
+<p align="center">
+  <img width="60%" height="60%" src="img/Data-Transmission-Diagram-Slave-to-Master-Data-Transfer.png">
+</p>
+
+
+## Advantages and Disadvantages of I2C
+There are some advantages and disadvantages to using SPI, and if given the choice between different communication protocols, you should know when to use SPI according to the requirements of your project:
+
+## Advantages
+- No start and stop bits, so the data can be streamed continuously without interruption
+- No complicated slave addressing system like I2C
+- Higher data transfer rate than I2C (almost twice as fast)
+- Separate MISO and MOSI lines, so data can be sent and received at the same time
+
+## Disadvantages
+- Uses four wires (I2C and UARTs use two)
+- No acknowledgement that the data has been successfully received (I2C has this)
+- No form of error checking like the parity bit in UART
+- Only allows for a single master

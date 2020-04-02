@@ -19,10 +19,3 @@
 - [DS18B20](./DS18B20)
 
 - [MAG3110](./MAG3110)
-
-
-# Communication protocols
-
-- [I2C](./I2C)
-
-- [SPI](./SPI)

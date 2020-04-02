@@ -1,5 +1,7 @@
 # I2C
 
+## Introduction
+
 **I²C (Inter-Integrated Circuit)** is a serial protocol for two-wire interface to connect low-speed devices like microcontrollers, EEPROMs, A/D and D/A converters, I/O interfaces and other similar peripherals in embedded systems. It was invented by [Philips](https://en.wikipedia.org/wiki/Philips) and now it is used by almost all major IC manufacturers. Each I²C slave device needs an address – they must still be obtained from [NXP](https://en.wikipedia.org/wiki/NXP_Semiconductors) (formerly Philips semiconductors).
 
 <p align="center">
